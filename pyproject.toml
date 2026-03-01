@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qlib-tradingbot"
+version = "1.0.0"
+description = "QLIB_TradingBot v1 - Qlib model + Alpaca paper trading"
+requires-python = ">=3.9"
+dependencies = [
+  "pandas>=2.0",
+  "numpy>=1.24",
+  "pyqlib==0.9.7",
+  "alpaca-py>=0.28.0",
+  "python-dotenv>=1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7.4",
+  "pytest-cov>=4.1",
+]
+
+[tool.setuptools]
+package-dir = {"" = "QLIB_TradingBot_v1"}
+
+[tool.setuptools.packages.find]
+where = ["QLIB_TradingBot_v1"]
