@@ -2,9 +2,11 @@
 Data/
 data/
 **/cache/
+**/downloads/
 **/caches/
 **/daily/
 **/*.csv
+!tests/fixtures/**/*.csv
 
 # Keep sample CSVs only if you intentionally want them:
 # !Data/samples/**/*.csv

@@ -11,6 +11,7 @@ from qlib_tradingbot.Strategies.dispatcher import StrategyDispatcher
 from qlib_tradingbot.Strategies.intraday_strategy import IntradayStrategy
 from qlib_tradingbot.Strategies.llm_planner_strategy import LLMPlannerStrategy
 from qlib_tradingbot.Strategies.position_model_strategies import LongTermStrategy, ShortTermStrategy
+from qlib_tradingbot.Strategies.scalping_strategy import ScalpingStrategy
 
 
 @dataclass
@@ -85,3 +86,35 @@ def test_llm_planner_strategy_is_deterministic_stub():
     signals = strategy.generate_signals({"universe": ["AAPL", "MSFT"]})
     assert len(signals) == 2
     assert signals[0].symbol == "AAPL"
+
+
+def test_scalping_dispatch_calls_stage_pipeline(monkeypatch):
+    called = {"pipeline": 0}
+    out_dir = Path("Data/test_dispatch_scalping")
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    def _fake_pipeline(*args, **kwargs):
+        called["pipeline"] += 1
+        out = Path(kwargs["output_dir"])
+        out.mkdir(parents=True, exist_ok=True)
+        pd.DataFrame({"Symbol": ["AAPL"]}).to_csv(out / "universe_trade_today.csv", index=False)
+        return {"ok": True}
+
+    monkeypatch.setattr("qlib_tradingbot.Strategies.scalping_strategy.run_3stage_qlib_scalp_pipeline", _fake_pipeline)
+    monkeypatch.setattr("qlib_tradingbot.Strategies.scalping_strategy.stage3_qlib_score", lambda *a, **k: (pd.Series(dtype=float), pd.DataFrame()))
+    monkeypatch.setattr("qlib_tradingbot.Strategies.scalping_strategy.fetch_1m_bars_batch", lambda *a, **k: {})
+
+    dispatcher = StrategyDispatcher({"scalping": lambda ctx: ScalpingStrategy(ctx)})
+    dispatcher.run(
+        "scalping",
+        StrategyContext(
+            run_id="r2",
+            correlation_id="c2",
+            now_utc=datetime(2026, 3, 2, 15, 0, tzinfo=timezone.utc),
+            data_dir=str(out_dir),
+            data_client=object(),
+            trade_client=_FakeTradeClient(),
+            config={"scalping_window_start_ny": "09:30", "scalping_window_end_ny": "11:00"},
+        ),
+    )
+    assert called["pipeline"] == 1
