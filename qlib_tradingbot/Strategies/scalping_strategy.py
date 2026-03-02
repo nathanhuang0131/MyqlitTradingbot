@@ -8,6 +8,7 @@ import pandas as pd
 from qlib_tradingbot.Core.models import Signal
 from qlib_tradingbot.Data.batch_bars import BatchFetchConfig, fetch_1m_bars_batch
 from qlib_tradingbot.Execution.engine import execute_signals
+from qlib_tradingbot.Execution.shorting import preflight_allow_shorts
 from qlib_tradingbot.Strategies.base import StrategyBase, StrategyContext
 from qlib_tradingbot.Strategies.hybrid_bias_trigger import signals_from_bias_and_1m_trigger
 from qlib_tradingbot.Strategies.scalp_pipeline_qlib import (
@@ -107,8 +108,12 @@ class ScalpingStrategy(StrategyBase):
             return []
         if self.ctx.trade_client is None:
             return []
+        allow_shorts = preflight_allow_shorts(
+            self.ctx.trade_client,
+            bool(self.ctx.config.get("allow_shorts", False)),
+        )
         if isinstance(signals[0], Signal):
-            return execute_signals(self.ctx.trade_client, signals)
+            return execute_signals(self.ctx.trade_client, signals, allow_shorts=allow_shorts)
         return signals
 
     def post_trade_reporting(self):

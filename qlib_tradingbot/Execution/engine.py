@@ -144,7 +144,13 @@ def execute_intent(trade_client, intent: OrderIntent, *, correlation_id: Optiona
         return place_simple_sell(trade_client, symbol=intent.symbol, qty=float(qty), correlation_id=correlation_id)
 
     return OrderResult(ok=False, symbol=intent.symbol, action=ot, submitted=False, error=f"Unknown order_type: {ot}", correlation_id=correlation_id)
-def execute_signals(trade_client, signals: List[Signal], *, cfg: EngineConfig = EngineConfig()) -> List[OrderResult]:
+def execute_signals(
+    trade_client,
+    signals: List[Signal],
+    *,
+    cfg: EngineConfig = EngineConfig(),
+    allow_shorts: bool = True,
+) -> List[OrderResult]:
     """Execute signals with basic safety checks (position cap + already holding)."""
     results: List[OrderResult] = []
     for sig in signals:
@@ -161,5 +167,17 @@ def execute_signals(trade_client, signals: List[Signal], *, cfg: EngineConfig = 
                 continue
 
         intent = intent_from_signal(sig, dollars_per_trade=cfg.dollars_per_trade)
+        if intent.order_type.upper() in ("BRACKET_SHORT", "BRACKET_SELL_SHORT") and not allow_shorts:
+            results.append(
+                OrderResult(
+                    ok=False,
+                    symbol=sym,
+                    action="SKIP",
+                    submitted=False,
+                    error="short selling disabled by safety preflight",
+                    correlation_id=sig.correlation_id,
+                )
+            )
+            continue
         results.append(execute_intent(trade_client, intent, correlation_id=sig.correlation_id))
     return results
