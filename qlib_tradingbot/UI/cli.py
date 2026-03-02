@@ -2,8 +2,18 @@ from __future__ import annotations
 
 import time
 from datetime import datetime, timezone
+from pathlib import Path
+
+import pandas as pd
 
 from qlib_tradingbot.Brokers.alpaca_clients import build_clients
+from qlib_tradingbot.Analytics.performance import (
+    breakdown_by_strategy,
+    breakdown_by_symbol,
+    daily_pnl,
+    load_trades,
+    win_rate,
+)
 from qlib_tradingbot.Strategies.base import StrategyContext
 from qlib_tradingbot.Strategies.dispatcher import StrategyDispatcher
 from qlib_tradingbot.Strategies.registry import default_registry
@@ -41,8 +51,9 @@ def _select_strategy() -> str:
     print("  2) Short-term")
     print("  3) Intraday")
     print("  4) Scalping (5m bias + 1m trigger)")
-    pick = input("Choice [1-4]: ").strip()
-    mapping = {"1": "long-term", "2": "short-term", "3": "intraday", "4": "scalping"}
+    print("  5) View Performance Analytics")
+    pick = input("Choice [1-5]: ").strip()
+    mapping = {"1": "long-term", "2": "short-term", "3": "intraday", "4": "scalping", "5": "__analytics__"}
     return mapping.get(pick, "long-term")
 
 
@@ -67,11 +78,45 @@ def build_runtime_config(strategy_name: str) -> dict[str, object]:
     }
 
 
+def build_analytics_view(choice: str, trades_df: pd.DataFrame) -> tuple[str, pd.DataFrame]:
+    if choice == "1":
+        return ("Daily P&L", daily_pnl(trades_df))
+    if choice == "2":
+        wr = win_rate(trades_df)
+        return ("Win Rate", pd.DataFrame([wr]))
+    if choice == "3":
+        return ("By Symbol", breakdown_by_symbol(trades_df))
+    if choice == "4":
+        return ("By Strategy", breakdown_by_strategy(trades_df))
+    return ("Unknown Option", pd.DataFrame())
+
+
+def run_analytics_cli(data_dir: Path) -> None:
+    ledger = data_dir / "trades_ledger.csv"
+    trades_df = load_trades(ledger)
+    print("\nPerformance Analytics")
+    print("  1) Daily P&L")
+    print("  2) Win rate")
+    print("  3) By symbol")
+    print("  4) By strategy")
+    pick = input("Choice [1-4]: ").strip()
+    title, table = build_analytics_view(pick, trades_df)
+    print(f"\n{title}")
+    if table.empty:
+        print("No data available.")
+        return
+    print(table.to_string(index=False))
+
+
 def run_once_interactive() -> None:
     print("\n=== QLIB TradingBot Unified Runner ===\n")
     print(f"Paper: {PAPER} | DRY_RUN: {DRY_RUN}\n")
 
     strategy_name = _select_strategy()
+    if strategy_name == "__analytics__":
+        run_analytics_cli(Path(DATA_DIR))
+        return
+
     cfg = build_runtime_config(strategy_name)
     loop_mode = bool(cfg.get("loop_mode", False))
     loop_sleep_sec = int(cfg.get("loop_sleep_sec", 60))
