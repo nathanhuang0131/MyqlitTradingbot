@@ -46,11 +46,7 @@ def _select_strategy() -> str:
     return mapping.get(pick, "long-term")
 
 
-def run_once_interactive() -> None:
-    print("\n=== QLIB TradingBot Unified Runner ===\n")
-    print(f"Paper: {PAPER} | DRY_RUN: {DRY_RUN}\n")
-
-    strategy_name = _select_strategy()
+def build_runtime_config(strategy_name: str) -> dict[str, object]:
     window_start = _prompt_text("Trading window start (NY, HH:MM)", "09:30")
     window_end = _prompt_text("Trading window end (NY, HH:MM)", "11:00")
     loop_mode = _prompt_bool("Loop mode", False)
@@ -58,23 +54,42 @@ def run_once_interactive() -> None:
     max_symbols = _prompt_int("Max symbols", 100)
     max_positions = _prompt_int("Max positions", 5)
     dollars_per_trade = _prompt_float("Dollars per trade", 250.0)
+    allow_shorts = _prompt_bool("Enable short selling?", False) if strategy_name == "scalping" else False
+    return {
+        "scalping_window_start_ny": window_start,
+        "scalping_window_end_ny": window_end,
+        "loop_mode": loop_mode,
+        "loop_sleep_sec": loop_sleep_sec,
+        "max_symbols": max_symbols,
+        "max_positions": max_positions,
+        "dollars_per_trade": dollars_per_trade,
+        "allow_shorts": allow_shorts,
+    }
+
+
+def run_once_interactive() -> None:
+    print("\n=== QLIB TradingBot Unified Runner ===\n")
+    print(f"Paper: {PAPER} | DRY_RUN: {DRY_RUN}\n")
+
+    strategy_name = _select_strategy()
+    cfg = build_runtime_config(strategy_name)
+    loop_mode = bool(cfg.get("loop_mode", False))
+    loop_sleep_sec = int(cfg.get("loop_sleep_sec", 60))
 
     now_utc = datetime.now(timezone.utc)
-    print(format_session_window(now_utc, window_start, window_end))
+    print(
+        format_session_window(
+            now_utc,
+            str(cfg.get("scalping_window_start_ny", "09:30")),
+            str(cfg.get("scalping_window_end_ny", "11:00")),
+        )
+    )
+    print(f"allow_shorts={bool(cfg.get('allow_shorts', False))}")
 
     data_client, trade_client = build_clients(paper=PAPER)
 
     dispatcher = StrategyDispatcher(default_registry().factories())
     orchestrator = Orchestrator(dispatcher=dispatcher)
-
-    cfg = {
-        "scalping_window_start_ny": window_start,
-        "scalping_window_end_ny": window_end,
-        "loop_mode": loop_mode,
-        "max_symbols": max_symbols,
-        "max_positions": max_positions,
-        "dollars_per_trade": dollars_per_trade,
-    }
 
     while True:
         ctx = StrategyContext(
