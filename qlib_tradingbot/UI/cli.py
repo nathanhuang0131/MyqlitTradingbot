@@ -19,6 +19,7 @@ from qlib_tradingbot.Strategies.dispatcher import StrategyDispatcher
 from qlib_tradingbot.Strategies.registry import default_registry
 from qlib_tradingbot.Utils.timezone_utils import format_session_window
 from qlib_tradingbot.config import DATA_DIR, DRY_RUN, PAPER
+from qlib_tradingbot.LLM.post_market_review import generate_post_market_package
 from qlib_tradingbot.orchestrator import Orchestrator
 
 
@@ -52,8 +53,16 @@ def _select_strategy() -> str:
     print("  3) Intraday")
     print("  4) Scalping (5m bias + 1m trigger)")
     print("  5) View Performance Analytics")
-    pick = input("Choice [1-5]: ").strip()
-    mapping = {"1": "long-term", "2": "short-term", "3": "intraday", "4": "scalping", "5": "__analytics__"}
+    print("  6) Generate LLM post-market package")
+    pick = input("Choice [1-6]: ").strip()
+    mapping = {
+        "1": "long-term",
+        "2": "short-term",
+        "3": "intraday",
+        "4": "scalping",
+        "5": "__analytics__",
+        "6": "__llm_export__",
+    }
     return mapping.get(pick, "long-term")
 
 
@@ -115,6 +124,18 @@ def run_once_interactive() -> None:
     strategy_name = _select_strategy()
     if strategy_name == "__analytics__":
         run_analytics_cli(Path(DATA_DIR))
+        return
+    if strategy_name == "__llm_export__":
+        export_strategy = _prompt_text("Strategy type for review (scalping|intraday|short-term|long-term)", "intraday")
+        data_client, trade_client = build_clients(paper=PAPER)
+        csv_path, prompt_path = generate_post_market_package(
+            data_dir=Path(DATA_DIR),
+            trade_client=trade_client,
+            data_client=data_client,
+            strategy_type=export_strategy,
+        )
+        print(f"Generated: {csv_path}")
+        print(f"Generated: {prompt_path}")
         return
 
     cfg = build_runtime_config(strategy_name)
