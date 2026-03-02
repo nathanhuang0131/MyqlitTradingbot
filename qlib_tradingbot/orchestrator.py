@@ -6,6 +6,7 @@ from pathlib import Path
 from typing import Any
 
 from qlib_tradingbot.Brokers.alpaca_gateway import get_market_clock, get_positions
+from qlib_tradingbot.Analytics.ledger import append_execution_results_ledger
 from qlib_tradingbot.Reporting.reporting import (
     now_ny_iso,
     write_orders_csv,
@@ -48,6 +49,12 @@ class Orchestrator:
 
         run_result = self.dispatcher.run(strategy_name, ctx)
         now_ny = now_ny_iso(ctx.now_utc)
+        append_execution_results_ledger(
+            data_dir,
+            strategy=strategy_name,
+            execution_result=list(run_result.get("execution_result") or []),
+            now_utc=ctx.now_utc,
+        )
 
         sig_rows = []
         for s in (run_result.get("execution_result") or []):
