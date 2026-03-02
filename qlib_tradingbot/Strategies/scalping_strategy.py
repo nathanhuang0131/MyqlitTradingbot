@@ -9,6 +9,7 @@ from qlib_tradingbot.Core.models import Signal
 from qlib_tradingbot.Data.batch_bars import BatchFetchConfig, fetch_1m_bars_batch
 from qlib_tradingbot.Execution.engine import execute_signals
 from qlib_tradingbot.Execution.shorting import preflight_allow_shorts
+from qlib_tradingbot.LLM.feedback_handler import apply_feedback_gating, refresh_bias_state
 from qlib_tradingbot.Strategies.base import StrategyBase, StrategyContext
 from qlib_tradingbot.Strategies.hybrid_bias_trigger import signals_from_bias_and_1m_trigger
 from qlib_tradingbot.Strategies.scalp_pipeline_qlib import (
@@ -101,7 +102,14 @@ class ScalpingStrategy(StrategyBase):
             price_basis_by_symbol=features.get("latest_close", {}),
         )
         self._latest_snapshot = selection.snapshot if selection.snapshot is not None else pd.DataFrame()
-        return selection.signals
+        state = refresh_bias_state(self.ctx.data_dir)
+        return apply_feedback_gating(
+            selection.signals,
+            state,
+            prob_threshold=float(self.ctx.config.get("llm_prob_threshold", 60.0)),
+            neutral_size_factor=float(self.ctx.config.get("llm_neutral_size_factor", 0.5)),
+            default_dollars=float(self.ctx.config.get("dollars_per_trade", 0.0)),
+        )
 
     def execute(self, signals):
         if not signals:
