@@ -171,4 +171,8 @@ def run_once_interactive() -> None:
         print(result)
         if not loop_mode:
             break
-        time.sleep(max(5, int(loop_sleep_sec)))
+        if result.get("status") == "market_closed":
+            print(f"Market closed in loop mode; sleeping {int(loop_sleep_sec)}s before re-check.")
+            time.sleep(max(1, int(loop_sleep_sec)))
+            continue
+        time.sleep(max(1, int(loop_sleep_sec)))
