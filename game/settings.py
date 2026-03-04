@@ -1,0 +1,20 @@
+from pathlib import Path
+
+SCREEN_WIDTH = 800
+SCREEN_HEIGHT = 576
+TILE_SIZE = 32
+GRID_WIDTH = 25
+GRID_HEIGHT = 18
+FPS = 60
+
+DANGER_ENCOUNTER_RATE = 0.15
+ROUNDS_PER_DAY = 5
+MAX_PARTY_SIZE = 4
+
+BASE_DIR = Path(__file__).resolve().parent
+DATA_DIR = BASE_DIR / "data"
+CSV_DIR = DATA_DIR / "csv"
+SAVE_DIR = DATA_DIR / "saves"
+ASSET_DIR = BASE_DIR / "assets"
+
+KO_RECOVER_TO_ONE_ON_WIN = True

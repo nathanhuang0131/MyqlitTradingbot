@@ -1,0 +1,11 @@
+id,name,owner_hint,unique,craftable
+artifact_1,Crown of Ash Dominion,King of Diablo,true,false
+artifact_2,Heavenbreak Halberd,Supreme Fighter,true,false
+artifact_3,Lumin Oathshield,Light of Paladin,true,false
+artifact_4,Grimoire: World Spiral,World of Magician,true,false
+artifact_5,Night Verdict Daggers,Grand Killer,true,false
+artifact_6,God Given Sigil,God Given,true,false
+artifact_7,Heartwood Bow of the First Hunt,Elf hero NPC,true,false
+artifact_8,Golemcore Aegis,Ancient dungeon,true,false
+artifact_9,Seraph Thread Robe,Church vault,true,false
+artifact_10,Chrono Ring of Five Rounds,lost relic,true,false

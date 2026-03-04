@@ -1,0 +1,5 @@
+id,name,slot,rarity,atk,defense,mag,mdef,agi,luck
+iron_sword,Iron Sword,weapon,Common,4,0,0,0,0,0
+silver_mail,Silver Mail,armor,Rare,0,5,0,3,-1,0
+moon_charm,Moon Charm,accessory,Epic,1,1,2,2,2,2
+saint_relic,Saint Relic,relic,Legendary,3,3,5,4,1,3

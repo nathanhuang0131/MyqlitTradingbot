@@ -1,0 +1,4 @@
+id,name,win_condition,lose_condition,start_flags
+ordinary,Ordinary Hero,defeat_king_of_diablo,player_dies,goal_defeat_king_of_diablo
+special,Special Route,defeat_king_of_diablo,player_dies|supreme_fighter_died,goal_defeat_king_of_diablo
+god_given,God Given Route,conquer_world,king_dies_before_conquer|supreme_fighter_died|player_dies,goal_conquer_world

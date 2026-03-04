@@ -1,0 +1,7 @@
+class_id,level,skill_id
+mage,1,firebolt
+healer,1,heal
+paladin,1,slash
+warrior,1,slash
+thief,1,slash
+hunter,1,slash

@@ -1,0 +1,4 @@
+id,name,hp,mp,atk,defense,mag,mdef,agi,luck,exp,gold,drops
+goblin,Goblin,55,8,9,4,2,3,7,4,20,12,material_claw
+slime,Slime,48,12,7,3,4,4,5,2,18,10,material_goo
+demon_hound,Demon Hound,72,14,12,6,5,5,10,6,34,20,fang

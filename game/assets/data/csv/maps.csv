@@ -1,0 +1,3 @@
+id,name,width,height,tile_size,danger_tiles
+starter_field,Starter Field,25,18,32,danger
+first_dungeon,First Dungeon,25,18,32,danger

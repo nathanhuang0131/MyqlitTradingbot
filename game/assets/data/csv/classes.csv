@@ -1,0 +1,7 @@
+id,name,hp,mp,atk,defense,mag,mdef,agi,luck
+mage,Mage,70,80,8,6,15,12,10,10
+healer,Healer,75,90,7,7,14,13,9,11
+paladin,Paladin,100,50,12,13,8,12,8,9
+warrior,Warrior,110,30,14,10,5,8,9,8
+thief,Thief,80,40,11,7,8,7,14,12
+hunter,Hunter,90,45,12,8,7,8,12,10

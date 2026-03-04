@@ -1,0 +1,5 @@
+id,item_id,target_npc,affection_delta,trust_delta
+gift_book,book,lady_airi,8,6
+gift_tea,tea,lady_airi,7,7
+gift_flower,flower,sister_mirelle,9,5
+gift_ale,ale,captain_darius,6,8

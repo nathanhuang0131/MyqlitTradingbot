@@ -1,0 +1,7 @@
+id,name,type,effect,value
+potion,Potion,consumable,heal_50,25
+ether,Ether,consumable,mp_30,30
+phoenix_leaf,Phoenix Leaf,consumable,revive_40,120
+material_claw,Claw,material,craft,8
+material_goo,Goo,material,craft,6
+king_seal,King Seal,key,story,0

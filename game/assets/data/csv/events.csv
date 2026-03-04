@@ -1,0 +1,4 @@
+id,map_id,x,y,trigger,flag_set,text
+ev_town,starter_field,3,3,on_enter,visited_town,Welcome to Solhaven.
+ev_shrine,starter_field,16,6,on_enter,shrine_prayed,The shrine answers in silence.
+ev_kingroad,starter_field,20,2,on_enter,seen_kings_road,The road to Diablo's citadel.

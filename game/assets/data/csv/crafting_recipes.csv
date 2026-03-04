@@ -1,0 +1,3 @@
+id,output_id,output_qty,materials,category
+recipe_1,moon_charm,1,material_claw:2|material_goo:3,epic
+recipe_2,saint_relic,1,material_claw:5|material_goo:6,relic

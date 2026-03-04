@@ -1,0 +1,7 @@
+id,name,skill_type,power,mp_cost,hit_rate,status_effect
+slash,Slash,physical,10,0,0.95,
+firebolt,Firebolt,magic,13,6,0.92,burn
+heal,Heal,heal,12,5,1.0,
+special_killer,Special Killer,status,1,12,1.0,poison|paralyze|sleep
+gold_converter,Gold Converter,special,0,0,1.0,
+mana_eater,Mana Eater,passive,0,0,1.0,

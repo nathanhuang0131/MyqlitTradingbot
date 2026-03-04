@@ -1,0 +1,13 @@
+id,name,class_id,faction,role,is_special
+supreme_fighter,Supreme Fighter,warrior,human,special,true
+king_of_diablo,King of Diablo,paladin,demon,boss,true
+world_of_magician,World of Magician,mage,elf,special,true
+light_of_paladin,Light of Paladin,paladin,human,special,true
+grand_killer,Grand Killer,thief,goblin,special,true
+god_given,God Given,mage,human,special,true
+lady_airi,Lady Airi Valen,healer,human,companion,false
+rin_kagetora,Rin Kagetora,thief,human,companion,false
+captain_darius,Captain Darius Holt,warrior,human,companion,false
+sister_mirelle,Sister Mirelle,healer,human,companion,false
+kael_stormeye,Kael Stormeye,hunter,elf,companion,false
+selene_arcwyn,Selene Arcwyn,mage,elf,companion,false

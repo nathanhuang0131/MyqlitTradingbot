@@ -1,0 +1,4 @@
+id,speaker,text,next_id,choice_key,flag_required
+intro_1,Narrator,In five rounds a day, fate still finds cracks.,intro_2,,
+intro_2,Airi,If you hesitate, the King of Diablo will not.,,,
+branch_special,Rin,Special blood draws special enemies.,,,goal_conquer_world
