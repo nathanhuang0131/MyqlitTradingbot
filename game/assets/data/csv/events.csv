@@ -1,4 +1,6 @@
 id,map_id,x,y,trigger,flag_set,text
-ev_town,starter_field,3,3,on_enter,visited_town,Welcome to Solhaven.
-ev_shrine,starter_field,16,6,on_enter,shrine_prayed,The shrine answers in silence.
-ev_kingroad,starter_field,20,2,on_enter,seen_kings_road,The road to Diablo's citadel.
+ev_town_intro,starter_field,3,3,on_enter,visited_town,Solhaven: ash falls like snow. A notice board calls for volunteers to investigate Black Stone Ruins.
+ev_town_airi,starter_field,3,3,on_interact,airi_intro,Lady Airi Valen approaches you in the square. (Dialogue: D_AIRI_001)
+ev_shrine,starter_field,16,6,on_enter,shrine_prayed,A silent shrine. A candle burns without wind. (Dialogue: D_SHRINE_001)
+ev_kingroad,starter_field,20,2,on_enter,seen_kings_road,The King's Road points toward the ash horizon and Diablo's destiny.
+ev_dungeon_gate,starter_field,20,12,on_enter,visited_dungeon,Black Stone Ruins: cracked runes glow crimson. (Dialogue: D_RUINS_001)
