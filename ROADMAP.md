@@ -22,18 +22,18 @@ Refactor the bot to a clean architecture where Qlib is the core alpha engine, pa
 ## Gate Plan
 
 ### Phase 3: Qlib Core Integration
-- [ ] G3-A: Add 5-file core architecture scaffolding:
+- [x] G3-A: Add 5-file core architecture scaffolding:
   - `qlib_tradingbot/core/data_provider.py`
   - `qlib_tradingbot/core/features.py`
   - `qlib_tradingbot/core/qlib_signal_engine.py`
   - `qlib_tradingbot/core/portfolio_risk.py`
   - `qlib_tradingbot/core/execution_ledger.py`
-- [ ] G3-B: QlibSignalEngine stub mode + goalcheck gate.
+- [x] G3-B: QlibSignalEngine stub mode + goalcheck gate.
   - Must emit standardized SignalFrame columns:
     `symbol,timestamp,alpha,direction,confidence,horizon,model_id`
   - Must support CLI stub output to CSV.
   - Must import/run without pyqlib installed.
-- [ ] G3-C: Convert one strategy (scalping) end-to-end to QlibSignalEngine-first ranking.
+- [x] G3-C: Convert one strategy (scalping) end-to-end to QlibSignalEngine-first ranking.
   - Qlib ranking is primary.
   - Rule logic remains only as post-filter.
 - [ ] G3-D: Dry-run/lazy Alpaca import hardening and test coverage.
