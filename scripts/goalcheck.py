@@ -14,6 +14,7 @@ CORE_FILES = [
     ROOT / "qlib_tradingbot/core/qlib_signal_engine.py",
     ROOT / "qlib_tradingbot/core/portfolio_risk.py",
     ROOT / "qlib_tradingbot/core/execution_ledger.py",
+    ROOT / "qlib_tradingbot/core/features_intraday.py",
 ]
 
 CORE_IMPORTS = [
@@ -22,9 +23,11 @@ CORE_IMPORTS = [
     "qlib_tradingbot.core.qlib_signal_engine",
     "qlib_tradingbot.core.portfolio_risk",
     "qlib_tradingbot.core.execution_ledger",
+    "qlib_tradingbot.core.features_intraday",
 ]
 
 DASH_IMPORTS = [
+    "qlib_tradingbot.apps.cli_app",
     "qlib_tradingbot.apps.dashboard_app",
     "qlib_tradingbot.dashboards.pages.1_Account",
     "qlib_tradingbot.dashboards.pages.2_Market",
@@ -86,6 +89,8 @@ def check_stub_signals() -> int:
             str(sig),
             "--symbols",
             "AAPL,MSFT,SPY",
+            "--strategy",
+            "intraday_3alpha",
         ]
     )
     if code != 0:
@@ -103,6 +108,55 @@ def check_stub_signals() -> int:
         return fail("signals.csv is empty")
 
     print("[goalcheck] stub signal engine output: ok")
+    return 0
+
+
+def check_intraday_runner_once() -> int:
+    tmp = ROOT / "Data" / "tmp_runner"
+    if tmp.exists():
+        for p in tmp.rglob("*"):
+            if p.is_file():
+                p.unlink()
+    tmp.mkdir(parents=True, exist_ok=True)
+    (tmp / "llm_feedback").mkdir(parents=True, exist_ok=True)
+    (tmp / "llm_feedback" / "llm_bias_state.json").write_text("{}", encoding="utf-8")
+
+    code, out = run(
+        [
+            sys.executable,
+            "-m",
+            "qlib_tradingbot.apps.cli_app",
+            "--strategy",
+            "intraday_3alpha",
+            "--mode",
+            "loop",
+            "--max-iter",
+            "1",
+            "--rebalance-min",
+            "15",
+            "--ny-window",
+            "00:00-23:59",
+            "--paper",
+            "--data-dir",
+            str(tmp),
+        ],
+        timeout=240,
+    )
+    if code != 0:
+        return fail(f"intraday runner failed\n{out}")
+
+    required = [
+        tmp / "signals" / "intraday_3alpha_signals.csv",
+        tmp / "intents" / "intents.csv",
+        tmp / "trade_history" / "mock_orders.csv",
+        tmp / "performance" / "pnl_daily.csv",
+        tmp / "performance" / "win_rate.csv",
+    ]
+    missing = [str(p) for p in required if not p.exists()]
+    if missing:
+        return fail(f"intraday runner missing outputs: {missing}")
+
+    print("[goalcheck] intraday runner dry-run outputs: ok")
     return 0
 
 
@@ -145,6 +199,7 @@ def main() -> int:
         check_core_files,
         lambda: check_imports(CORE_IMPORTS, "core"),
         check_stub_signals,
+        check_intraday_runner_once,
         check_perf_report,
         lambda: check_imports(DASH_IMPORTS, "dashboard"),
     ]

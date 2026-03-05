@@ -54,5 +54,17 @@ Refactor the bot to a clean architecture where Qlib is the core alpha engine, pa
 - [ ] G4-E: Goalcheck/dashboard smoke imports + performance report file checks.
 
 ## Immediate Work Order
-1. Execute `G3-B`.
-2. Execute `G3-C`.
+1. Execute `G5-A`: intraday_3alpha strategy + feature builder + qlib stub integration.
+2. Execute `G5-B`: automatic intraday runner + outputs + LLM bias gating.
+3. Execute `G5-C`: dashboard alpha columns + goalcheck + tests.
+
+### Phase 5: Intraday 3-Alpha Autonomy
+- [x] G5-A: Add `intraday_3alpha` with blended alpha:
+  - `alpha_total = 0.55*alpha_ml + 0.25*alpha_mr + 0.20*alpha_mom`
+  - 15-feature intraday builder with `label_fwd_ret_6`
+  - QlibSignalEngine `--strategy intraday_3alpha` predict path (stub-safe)
+- [x] G5-B: Add unattended runner command:
+  - `python -m qlib_tradingbot.apps.cli_app --strategy intraday_3alpha --mode loop --rebalance-min 15 --ny-window 09:30-15:55 --paper`
+  - market-closed sleep/retry behavior
+  - output files under `Data/signals`, `Data/intents`, `Data/trade_history`, `Data/performance`
+- [x] G5-C: Add tests + goalcheck enforcement for intraday 3-alpha and dashboard alpha columns.

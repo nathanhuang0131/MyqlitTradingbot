@@ -40,11 +40,24 @@ def render(data_root: Path | str = "Data") -> None:
         else:
             st.dataframe(df.tail(30))
 
-    sig_path = root / "signals.csv"
+    sig_path = root / "signals" / "intraday_3alpha_signals.csv"
     if sig_path.exists():
         sig = pd.read_csv(sig_path)
-        st.subheader("Per-Symbol Signals")
-        st.dataframe(sig.tail(50))
+        st.subheader("Intraday Alphas")
+        cols = [c for c in ["symbol", "alpha_ml", "alpha_mr", "alpha_mom", "alpha_total", "close_last", "dollar_vol"] if c in sig.columns]
+        if cols:
+            st.dataframe(sig[cols].head(50))
+        else:
+            st.dataframe(sig.head(50))
+            st.caption("Missing expected alpha columns in cached signals file.")
+
+        if {"symbol", "close_last"}.issubset(sig.columns):
+            watch = sig.copy()
+            watch["move_pct"] = pd.to_numeric(watch.get("intraday_return", 0.0), errors="coerce").fillna(0.0) * 100.0
+            wcols = [c for c in ["symbol", "close_last", "dollar_vol", "vol_ratio_1", "move_pct"] if c in watch.columns]
+            if wcols:
+                st.subheader("Watchlist Price/Volume/Move")
+                st.dataframe(watch[wcols].head(50))
 
 
 render()

@@ -51,3 +51,35 @@
 ## 8) No-Network Tests
 - [ ] New tests avoid network access.
 - [ ] Fixtures/stubs for market and flow data exist under `Data/market/` and `Data/fixtures/`.
+
+## 9) Intraday 3-Alpha Strategy
+- [ ] `qlib_tradingbot/Strategies/intraday_3alpha.py` exists and integrates:
+  - [ ] alpha_ml from `QlibSignalEngine`
+  - [ ] alpha_mr from VWAP/Bollinger/RSI mean-reversion logic
+  - [ ] alpha_mom from breakout + volume confirmation logic
+  - [ ] deterministic blend into `alpha_total`
+- [ ] `qlib_tradingbot/core/features_intraday.py` emits exact feature names and `label_fwd_ret_6`.
+- [ ] `python -m qlib_tradingbot.ML.train --strategy intraday_3alpha` runs in stub-safe mode.
+- [ ] `python -m qlib_tradingbot.core.qlib_signal_engine --strategy intraday_3alpha --out ...` runs and outputs signals.
+
+## 10) Intraday Autonomous Runner
+- [ ] `python -m qlib_tradingbot.apps.cli_app --strategy intraday_3alpha ...` supports unattended loop mode.
+- [ ] Runner respects NY window and handles market-closed sleep/retry.
+- [ ] Dry-run produces:
+  - [ ] `Data/signals/intraday_3alpha_signals.csv`
+  - [ ] `Data/intents/intents.csv`
+  - [ ] `Data/trade_history/mock_orders.csv`
+  - [ ] `Data/performance/pnl_daily.csv`
+  - [ ] `Data/performance/win_rate.csv`
+- [ ] Live mode requires explicit `--live` and strategy allowlist.
+
+## 11) Intraday Dashboard Fields
+- [ ] Market dashboard displays `alpha_ml`, `alpha_mr`, `alpha_mom`, `alpha_total`.
+- [ ] Market dashboard shows watchlist price/volume/move from cached data only.
+
+## 12) Intraday Test Coverage
+- [ ] Feature builder test validates columns + label correctness.
+- [ ] Alpha blend determinism test exists.
+- [ ] Strategy ranking test proves Qlib engine ordering is used.
+- [ ] Runner dry-run integration test verifies output artifacts.
+- [ ] LLM bias gating test verifies bearish/bullish threshold effect.
