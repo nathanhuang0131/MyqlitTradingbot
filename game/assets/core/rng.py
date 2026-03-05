@@ -12,6 +12,9 @@ class RNGService:
     def chance(self, pct: float) -> bool:
         return self._random.random() < pct
 
+    def roll(self) -> float:
+        return self._random.random()
+
     def randint(self, a: int, b: int) -> int:
         return self._random.randint(a, b)
 

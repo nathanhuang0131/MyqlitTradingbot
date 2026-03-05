@@ -1,0 +1,475 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+  "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="https://opengameart.org/sites/all/themes/oga/opengameart2_favicon.ico" type="image/vnd.microsoft.icon" />
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+<meta name="description" content="A goblin made in LPC style by Redshrike. More parts (shield, helmet, etc.) coming soon." />
+<meta name="generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="canonical" href="https://opengameart.org/content/lpc-goblin" />
+<link rel="shortlink" href="https://opengameart.org/node/25466" />
+<meta property="og:site_name" content="OpenGameArt.org" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://opengameart.org/content/lpc-goblin" />
+<meta property="og:title" content="[LPC] Goblin" />
+<meta property="og:description" content="A goblin made in LPC style by Redshrike. More parts (shield, helmet, etc.) coming soon." />
+<meta property="og:updated_time" content="2019-10-19T23:46:41-07:00" />
+<meta property="og:image" content="https://opengameart.org/sites/default/files/lpc_goblin_preview.png" />
+<meta property="article:published_time" content="2014-06-26T10:11:26-07:00" />
+<meta property="article:modified_time" content="2019-10-19T23:46:41-07:00" />
+<meta name="dcterms.title" content="[LPC] Goblin" />
+<meta name="dcterms.creator" content="William.Thompsonj" />
+<meta name="dcterms.description" content="A goblin made in LPC style by Redshrike. More parts (shield, helmet, etc.) coming soon." />
+<meta name="dcterms.publisher" content="OpenGameArt.org" />
+<meta name="dcterms.date" content="2014-06-26T10:11-07:00" />
+<meta name="dcterms.type" content="Image" />
+<meta name="dcterms.format" content="text/html" />
+  <title>[LPC] Goblin | OpenGameArt.org</title>
+  <link type="text/css" rel="stylesheet" href="https://opengameart.org/sites/default/files/css/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://opengameart.org/sites/default/files/css/css_ff3tJc71Z402cxcrQprs7GRkOQJuOqgs2LWeSWIHHR0.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://opengameart.org/sites/default/files/css/css_tEtvFGhnOc-KHD4tmmzYBpkDNcsr2D2Ep4vHodgpeO0.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://opengameart.org/sites/default/files/css/css_yvSvohn2vroFCEffcYBt9DRR-HehyFA_4rW2FdWzqwI.css" media="all" />
+  <script type="text/javascript" src="https://opengameart.org/sites/default/files/js/js_YD9ro0PAqY25gGWrTki6TjRUG8TdokmmxjfqpNNfzVU.js"></script>
+<script type="text/javascript" src="https://opengameart.org/sites/default/files/js/js_OleKOf9_B3i8KMuL1Hw42y0CdgVBVJBkK2f0bnCIGKY.js"></script>
+<script type="text/javascript" src="https://opengameart.org/sites/default/files/js/js_gHk2gWJ_Qw_jU2qRiUmSl7d8oly1Cx7lQFrqcp3RXcI.js"></script>
+<script type="text/javascript" src="https://opengameart.org/sites/default/files/js/js_9bncmYixfTNYGMATt6yVLaNQV0GhvO1_z14bWnF3otY.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var lightbox_path="/sites/all/modules/oga/lightbox";jQuery(document).ready(function () { jQuery("a.preview-lightbox").lightBox(); });
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://opengameart.org/sites/default/files/js/js_7ogYAP4kmkUPDhqIzRFfdtY7h1in9LBAd1txo2bdFkw.js"></script>
+<script type="text/javascript" src="https://opengameart.org/sites/default/files/js/js_WNcjX9C7AzUw-N1abXrdZLpLq71PtBe1dISODcGzqx8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","setHasJsCookie":0,"ajaxPageState":{"theme":"oga_theme_no_side_bar","theme_token":"zTLtOl7SUnxPvfb_kQlLIBo0OV07W9K54bkLepE_-94","js":{"misc\/jquery.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"misc\/jquery.cookie.js":1,"misc\/form-single-submit.js":1,"sites\/all\/modules\/entityreference\/js\/entityreference.js":1,"sites\/all\/modules\/oga\/lightbox\/js\/jquery.lightbox-0.5.js":1,"0":1,"sites\/all\/modules\/compact_forms\/compact_forms.js":1,"modules\/openid\/openid.js":1,"sites\/all\/modules\/oga\/ajax_dlcount\/ajax_dlcount.js":1,"sites\/all\/themes\/oga\/oga_theme.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/comment_notify\/comment_notify.css":1,"modules\/comment\/comment.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/logintoboggan\/logintoboggan.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"modules\/forum\/forum.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/oga\/cctag\/cctag.css":1,"sites\/all\/modules\/oga\/lightbox\/css\/jquery.lightbox-0.5.css":1,"sites\/all\/modules\/compact_forms\/compact_forms.css":1,"modules\/openid\/openid.css":1,"sites\/all\/modules\/ds\/layouts\/ds_3col_stacked_fluid\/ds_3col_stacked_fluid.css":1,"sites\/all\/modules\/ds\/layouts\/ds_2col_stacked\/ds_2col_stacked.css":1,"sites\/all\/themes\/oga\/oga_theme.css":1,"sites\/all\/themes\/oga\/oga_no_side_bar\/oga_theme_no_side_bar.css":1}},"compactForms":{"forms":["user-login-form"],"stars":2},"urlIsAjaxTrusted":{"\/art-search":true,"\/content\/lpc-goblin?destination=node\/25466":true}});
+//--><!]]>
+</script>
+</head>
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-25466 node-type-art domain-opengameart-org" >
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
+    
+<noscript><style>
+node_art_form_group_author_information {
+  display: block !important;
+}
+</style></noscript>
+
+<div id='page'>
+  <div id='topright'>  <div class="region region-topright">
+    <div id="block-user-login" class="block block-user">
+
+    <h2>User login</h2>
+  
+  <div class="content">
+    <form action="/content/lpc-goblin?destination=node/25466" method="post" id="user-login-form" accept-charset="UTF-8"><div><div class="form-item form-type-textfield form-item-openid-identifier">
+  <label for="edit-openid-identifier">OpenID </label>
+ <input type="text" id="edit-openid-identifier" name="openid_identifier" value="" size="15" maxlength="255" class="form-text" />
+<div class="description"><a href="http://openid.net/">What is OpenID?</a></div>
+</div>
+<div class="form-item form-type-textfield form-item-name">
+  <label for="edit-name">Username or e-mail <span class="form-required" title="This field is required.">*</span></label>
+ <input type="text" id="edit-name" name="name" value="" size="15" maxlength="60" class="form-text required" />
+</div>
+<div class="form-item form-type-password form-item-pass">
+  <label for="edit-pass">Password <span class="form-required" title="This field is required.">*</span></label>
+ <input type="password" id="edit-pass" name="pass" size="15" maxlength="128" class="form-text required" />
+</div>
+<input type="hidden" name="form_build_id" value="form-rXMVLBE1fM9T4NcV41R5pS3qFn3eDsb9_NGP5F6-TOI" />
+<input type="hidden" name="form_id" value="user_login_block" />
+<input type="hidden" name="openid.return_to" value="https://opengameart.org/openid/authenticate?destination=node/25466" />
+<div class="item-list"><ul class="openid-links"><li class="openid-link first"><a href="#openid-login">Log in using OpenID</a></li>
+<li class="user-link last"><a href="#">Cancel OpenID login</a></li>
+</ul></div><div class="item-list"><ul><li class="first"><a href="/user/register" title="Create a new user account.">Create new account</a></li>
+<li class="last"><a href="/user/password" title="Request new password via e-mail.">Request new password</a></li>
+</ul></div><div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="Log in" class="form-submit" /></div></div></form>  </div>
+</div>
+<div id="block-oga-register" class="block block-oga">
+
+    
+  <div class="content">
+    <a href='#' onclick='window.location="/user/register?human=1"'>Register</a>  </div>
+</div>
+  </div>
+</div>
+  <a href='/' id='maintitle'></a>
+
+  <div id='menubar'>
+      <div class="region region-menubar">
+    <div id="block-menu-block-menubar" class="block block-menu-block">
+
+    
+  <div class="content">
+    <div class="menu-block-wrapper menu-block-menubar menu-name-main-menu parent-mlid-0 menu-level-1">
+  <ul class="menu"><li class="first leaf menu-mlid-173"><a href="/">Home</a></li>
+<li class="expanded menu-mlid-486"><a href="/latest" title="">Browse</a><ul class="menu"><li class="first leaf menu-mlid-487"><a href="/art-search-advanced?keys=&amp;field_art_type_tid%5B%5D=9&amp;sort_by=count&amp;sort_order=DESC" title="Browse Popular 2d Art">2D Art</a></li>
+<li class="leaf menu-mlid-488"><a href="/art-search-advanced?keys=&amp;field_art_type_tid%5B%5D=10&amp;sort_by=count&amp;sort_order=DESC" title="Browse popular 3D art">3D Art</a></li>
+<li class="leaf menu-mlid-1819"><a href="/art-search-advanced?keys=&amp;field_art_type_tid%5B%5D=7273&amp;sort_by=count&amp;sort_order=DESC" title="Browse popular concept art">Concept Art</a></li>
+<li class="leaf menu-mlid-492"><a href="/art-search-advanced?keys=&amp;field_art_type_tid%5B%5D=14&amp;sort_by=count&amp;sort_order=DESC" title="Browse popular textures">Textures</a></li>
+<li class="leaf menu-mlid-490"><a href="/art-search-advanced?keys=&amp;field_art_type_tid%5B%5D=12&amp;sort_by=count&amp;sort_order=DESC" title="Browse popular music">Music</a></li>
+<li class="leaf menu-mlid-491"><a href="/art-search-advanced?keys=&amp;field_art_type_tid%5B%5D=13&amp;sort_by=count&amp;sort_order=DESC" title="Browse popular sound effects">Sound Effects</a></li>
+<li class="leaf menu-mlid-489"><a href="/art-search-advanced?keys=&amp;field_art_type_tid%5B%5D=11&amp;sort_by=count&amp;sort_order=DESC" title="Browse popular documents">Documents</a></li>
+<li class="last leaf menu-mlid-1464"><a href="/forums/featured-tutorials" title="">Featured Tutorials</a></li>
+</ul></li>
+<li class="leaf menu-mlid-485"><a href="/node/add/art" title="">Submit Art</a></li>
+<li class="expanded menu-mlid-1059"><a href="/collections">Collect</a><ul class="menu"><li class="first leaf menu-mlid-1060"><a href="/my-collections">My Collections</a></li>
+<li class="last leaf menu-mlid-1062"><a href="/collections" title="">Art Collections</a></li>
+</ul></li>
+<li class="expanded menu-mlid-322"><a href="/forums/art-discussion">Forums</a></li>
+<li class="leaf menu-mlid-673"><a href="/content/faq" title="Frequently Asked Questions">FAQ</a></li>
+<li class="expanded menu-mlid-2335"><a href="/leaderboards/total" title="">Leaderboards</a><ul class="menu"><li class="first expanded menu-mlid-2343"><a href="/leaderboards/total" title="">All Time</a><ul class="menu"><li class="first leaf menu-mlid-2336"><a href="/leaderboards/total" title="">Total Points</a></li>
+<li class="leaf menu-mlid-2338"><a href="/leaderboards/comments" title="">Comments</a></li>
+<li class="leaf menu-mlid-2337"><a href="/leaderboards/favorites" title="">Favorites (All)</a></li>
+<li class="leaf menu-mlid-2344"><a href="/leaderboards/2d" title="">Favorites (2D)</a></li>
+<li class="leaf menu-mlid-2345"><a href="/leaderboards/3d" title="">Favorites (3D)</a></li>
+<li class="leaf menu-mlid-2346"><a href="/leaderboards/concept" title="">Favorites (Concept Art)</a></li>
+<li class="leaf menu-mlid-2347"><a href="/leaderboards/music" title="">Favorites (Music)</a></li>
+<li class="leaf menu-mlid-2348"><a href="/leaderboards/sound" title="">Favorites (Sound)</a></li>
+<li class="last leaf menu-mlid-2349"><a href="/leaderboards/textures" title="">Favorites (Textures)</a></li>
+</ul></li>
+<li class="last expanded menu-mlid-2350"><a href="/weekly-leaderboards/total" title="">Weekly</a><ul class="menu"><li class="first leaf menu-mlid-2351"><a href="/weekly-leaderboards/total" title="">Total Points</a></li>
+<li class="leaf menu-mlid-2352"><a href="/weekly-leaderboards/comments" title="">Comments</a></li>
+<li class="leaf menu-mlid-2353"><a href="/weekly-leaderboards/favorites" title="">Favorites (All)</a></li>
+<li class="leaf menu-mlid-2354"><a href="/weekly-leaderboards/2d" title="">Favorites (2D)</a></li>
+<li class="leaf menu-mlid-2355"><a href="/weekly-leaderboards/3d" title="">Favorites (3D)</a></li>
+<li class="leaf menu-mlid-2356"><a href="/weekly-leaderboards/concept" title="">Favorites (Concept Art)</a></li>
+<li class="leaf menu-mlid-2357"><a href="/weekly-leaderboards/music" title="">Favorites (Music)</a></li>
+<li class="leaf menu-mlid-2358"><a href="/weekly-leaderboards/sound" title="">Favorites (Sound)</a></li>
+<li class="last leaf menu-mlid-2359"><a href="/weekly-leaderboards/textures" title="">Favorites (Textures)</a></li>
+</ul></li>
+</ul></li>
+<li class="last leaf menu-mlid-3683"><a href="https://www.patreon.com/opengameart" title="">❤ Donate</a></li>
+</ul></div>
+  </div>
+</div>
+<div id="block-block-5" class="block block-block">
+
+    
+  <div class="content">
+    <a href='/'><img src='/sites/default/files/archive/sara-logo.png' title='Sara' /></a>  </div>
+</div>
+  </div>
+    <div id='menubar-right'>
+        <div class="region region-menubar-right">
+    <div id="block-views-exp-art-search-art" class="block block-views">
+
+    
+  <div class="content">
+    <form action="/art-search" method="get" id="views-exposed-form-art-search-art" accept-charset="UTF-8"><div><div class="views-exposed-form">
+  <div class="views-exposed-widgets clearfix">
+          <div id="edit-keys-wrapper" class="views-exposed-widget views-widget-filter-keys">
+                  <label for="edit-keys">
+            Search          </label>
+                        <div class="views-widget">
+          <div class="form-item form-type-textfield form-item-keys">
+ <input title="Enter the terms you wish to search for." type="text" id="edit-keys" name="keys" value="" size="15" maxlength="128" class="form-text" />
+</div>
+        </div>
+              </div>
+                    <div class="views-exposed-widget views-submit-button">
+      <input type="submit" id="edit-submit-art" value="Search" class="form-submit" />    </div>
+      </div>
+</div>
+</div></form>  </div>
+</div>
+  </div>
+    </div>
+  </div>
+
+  <div id='maincontent'>
+    <div id='right' class='nosidebar'>
+            
+            <div class='tabs'></div>
+            
+                    <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
+
+    
+  <div class="content">
+    <div class="ds-2col-stacked node node-art view-mode-full clearfix">
+
+  
+      <div class="group-header">
+      <div class="field field-name-title field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even" property="dc:title"><h2>[LPC] Goblin</h2></div></div></div>    </div>
+  
+      <div class="group-left left-column">
+      <div class="field field-name-author-submitter field-type-ds field-label-above"><div class="field-label">Author:&nbsp;</div><div class="field-items"><div class="field-item even"><span class='username'><a href="/users/williamthompsonj">William.Thompsonj</a></span></div></div></div><div class="field field-name-post-date field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even">Thursday, June 26, 2014 - 10:11</div></div></div><div class="field field-name-field-collaborators field-type-user-reference field-label-above"><div class="field-label">Collaborators:&nbsp;</div><div class="field-items"><div class="field-item even"><a href="/users/redshrike">Redshrike</a></div></div></div><div class="field field-name-field-art-type field-type-taxonomy-term-reference field-label-above"><div class="field-label">Art Type:&nbsp;</div><div class="field-items"><div class="field-item even"><a href="/art-search-advanced?field_art_type_tid%5B%5D=9" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">2D Art</a></div></div></div><div class="field field-name-field-art-tags field-type-taxonomy-term-reference field-label-above"><div class="field-label">Tags:&nbsp;</div><div class="field-items"><div class="field-item even"><a href="/art-search-advanced?field_art_tags_tid=LPC" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">LPC</a></div><div class="field-item odd"><a href="/art-search-advanced?field_art_tags_tid=goblin" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">goblin</a></div><div class="field-item even"><a href="/art-search-advanced?field_art_tags_tid=Enemy" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">Enemy</a></div><div class="field-item odd"><a href="/art-search-advanced?field_art_tags_tid=sword" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">sword</a></div><div class="field-item even"><a href="/art-search-advanced?field_art_tags_tid=RPG" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">RPG</a></div></div></div><div class="field field-name-field-art-licenses field-type-taxonomy-term-reference field-label-above"><div class="field-label">License(s):&nbsp;</div><div class="field-items"><div class="field-item even"><div class='license-icon'><a href='https://creativecommons.org/licenses/by/4.0/' target='_blank'><img src='https://opengameart.org/sites/default/files/license_images/cc-by_0.png' alt='' title=''><div class='license-name'>CC-BY 4.0</div></a></div></div><div class="field-item odd"><div class='license-icon'><a href='http://creativecommons.org/licenses/by/3.0/' target='_blank'><img src='https://opengameart.org/sites/default/files/license_images/cc-by.png' alt='' title=''><div class='license-name'>CC-BY 3.0</div></a></div></div><div class="field-item even"><div class='license-icon'><a href='http://www.gnu.org/licenses/gpl-3.0.html' target='_blank'><img src='https://opengameart.org/sites/default/files/license_images/gpl.png' alt='' title=''><div class='license-name'>GPL 3.0</div></a></div></div><div class="field-item odd"><div class='license-icon'><a href='http://www.gnu.org/licenses/old-licenses/gpl-2.0.html' target='_blank'><img src='https://opengameart.org/sites/default/files/license_images/gpl.png' alt='' title=''><div class='license-name'>GPL 2.0</div></a></div></div><div class="field-item even"><div class='license-icon'><a href='http://opengameart.org/content/oga-by-30-faq' target='_blank'><img src='https://opengameart.org/sites/default/files/license_images/oga-by.png' alt='' title=''><div class='license-name'>OGA-BY 3.0</div></a></div></div></div></div><div class="field field-name-collect field-type-ds field-label-above"><div class="field-label">Collections:&nbsp;</div><div class="field-items"><div class="field-item even"><div class='collect-container'><ul><li><a href="/content/dont-list-this-collection-in-the-archive-rpg"> Don&#039;t list this collection in the archive RPG</a></li><li><a href="/content/01-pixel-art-characters">01. Pixel Art - Characters</a></li><li><a href="/content/2d-rpg-lpc-compatible-tilessprites">2D - RPG - [LPC]-Compatible Tiles/Sprites</a></li><li><a href="/content/2d-rpg-characters">2D - RPG Characters</a></li><li><a href="/content/2d-assets">2D assets</a></li><li><a href="/content/2dspriteorthogonal">2D::Sprite::Orthogonal</a></li><li><a href="/content/34-directional-sprite-sets">3/4 Directional Sprite Sets</a></li><li><a href="/content/8-frame-walk-cycles">8 Frame Walk Cycles</a></li><li><a href="/content/a-pixel-art-collection">A Pixel Art Collection</a></li><li><a href="/content/ak-2d-characters">AK 2D Characters</a></li><li><a href="/content/ak-topdown-characters">AK TopDown Characters</a></li><li><a href="/content/animated-top-down-creatures">Animated top down creatures.</a></li><li><a href="/content/bunchofheroes">BunchOfHeroes</a></li><li><a href="/content/characters-12">Characters</a></li><li><a href="/content/characters-8">Characters</a></li><li><a href="/content/collection-for-mupsies2d">Collection for Mupsies2D</a></li><li><a href="/content/credits-0">Credits</a></li><li><a href="/content/d-rpg-artmusic-assets">D-RPG (Art/Music Assets)</a></li><li><a href="/content/discontinuum">Discontinuum</a></li><li><a href="/content/epic-pixelart-rpg">Epic Pixelart RPG</a></li><li><a href="/content/evergreen-prototype">Evergreen prototype</a></li><li><a href="/content/fantasy-pixel-creatures">Fantasy Pixel Creatures</a></li><li><a href="/content/gamecollection">GameCollection</a></li><li><a href="/content/hero-game">hero game</a></li><li><a href="/content/liberated-pixel-cup-0">Liberated Pixel Cup</a></li><li><a href="/content/long-licence-fantasy-modern-game">long licence fantasy modern game</a></li><li><a href="/content/lpc-1">LPC</a></li><li><a href="/content/lpc-2">LPC</a></li><li><a href="/content/lpc-creatures-and-animals">LPC - Creatures and animals</a></li><li><a href="/content/lpc-art-collection-others">LPC Art Collection + Others</a></li><li><a href="/content/lpc-character-collection">LPC Character Collection</a></li><li><a href="/content/lpc-characters">LPC Characters</a></li><li><a href="/content/lpc-collection">LPC Collection</a></li><li><a href="/content/lpc-game-assets">LPC Game assets</a></li><li><a href="/content/lpc-gms2-index-for-personal-use">LPC GMS2 Index for Personal Use</a></li><li><a href="/content/lpc-monsters-0">LPC Monsters</a></li><li><a href="/content/lpc-sprites">LPC Sprites</a></li><li><a href="/content/lpc-wars">LPC Wars</a></li><li><a href="/content/monsters-bosses">Monsters &amp; Bosses</a></li><li><a href="/content/oddball-gamez-lpc-style">Oddball Gamez LPC Style</a></li><li><a href="/content/pcs-npcs">pcs &amp; npcs</a></li><li><a href="/content/personal-collection-for-a-game">Personal collection for a game</a></li><li><a href="/content/pixel-characters">Pixel Characters</a></li><li><a href="/content/platformer-pixel-art">Platformer Pixel Art</a></li><li><a href="/content/potential-html5-rpg-assets">Potential HTML5 RPG Assets</a></li><li><a href="/content/project-a-mobs">Project A - Mobs</a></li><li><a href="/content/roguelike">Roguelike</a></li><li><a href="/content/rpg-13">RPG</a></li><li><a href="/content/rpg-characters">RPG Characters</a></li><li><a href="/content/rpg-stuff-collection">RPG Stuff Collection</a></li><li><a href="/content/rpgmakerassets">RpgMakerAssets</a></li><li><a href="/content/stendhal-potential">Stendhal Potential</a></li><li><a href="/content/tale-of-two-lands">Tale of Two Lands</a></li><li><a href="/content/test-10">test</a></li><li><a href="/content/test-5">Test</a></li><li><a href="/content/top-down-2d-jrpg-32x32-characters-art-collection">Top Down 2D JRPG 32x32 Characters Art Collection</a></li><li><a href="/content/top-down-2d-knight-shmup">Top Down 2d Knight Shmup</a></li><li><a href="/content/top-down-fantasy-rpg-for-commercial-use">Top Down Fantasy RPG for Commercial Use</a></li><li><a href="/content/top-down-2d-rpg">Top-down 2D RPG</a></li><li><a href="/content/use">Use</a></li><li><a href="/content/wizard-tower-project">Wizard Tower Project</a></li><li><a href="/content/zelda-like-rpg">Zelda Like RPG</a></li></ul></div></div></div></div><div class="field field-name-favorites field-type-ds field-label-inline clearfix"><div class="field-label">Favorites:&nbsp;</div><div class="field-items"><div class="field-item even">141</div></div></div>    </div>
+  
+      <div class="group-right right-column">
+      <div class="field field-name-field-art-preview field-type-file field-label-above"><div class="field-label">Preview:&nbsp;</div><div class="field-items"><div class="field-item even"><a href="https://opengameart.org/sites/default/files/lpc_goblin_preview.png" class="preview-lightbox"><img src='https://opengameart.org/sites/default/files/styles/medium/public/lpc_goblin_preview.png'  alt='Preview'></a></div><div class="field-item odd"><a href="https://opengameart.org/sites/default/files/goblinsword.png" class="preview-lightbox"><img src='https://opengameart.org/sites/default/files/styles/medium/public/goblinsword.png'  alt='Preview'></a></div></div></div><div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>A goblin made in LPC style by Redshrike. More parts (shield, helmet, etc.) coming soon.</p>
+</div></div></div><div class="field field-name-field-copyright-notice field-type-text-long field-label-above"><div class="field-label">Copyright/Attribution Notice:&nbsp;</div><div class="field-items"><div class="field-item even">Attribute Stephen &quot;Redshrike&quot; Challener as graphic artist and William.Thompsonj as contributor. If reasonable link to this page or the OGA homepage.</div></div></div><div class="field field-name-field-art-files field-type-file field-label-above"><div class="field-label">File(s):&nbsp;</div><div class="field-items"><div class="field-item even"><span class="file"><img class="file-icon" alt="goblin.png" title="image/png" src="/modules/file/icons/image-x-generic.png" /> <a href="https://opengameart.org/sites/default/files/goblin_0.png" type="image/png; length=35496" data-fid="42450" target="_blank" download="goblin.png">goblin.png</a> 35.5 Kb <span class="dlcount">[<span class="dlcount-number" id="dlcount-42450">15184</span> download(s)]</span></span></div><div class="field-item odd"><span class="file"><img class="file-icon" alt="sword.png" title="image/png" src="/modules/file/icons/image-x-generic.png" /> <a href="https://opengameart.org/sites/default/files/sword_4.png" type="image/png; length=6320" data-fid="42451" target="_blank" download="sword.png">sword.png</a> 6.3 Kb <span class="dlcount">[<span class="dlcount-number" id="dlcount-42451">9061</span> download(s)]</span></span></div><div class="field-item even"><span class="file"><img class="file-icon" alt="goblinsword.png" title="image/png" src="/modules/file/icons/image-x-generic.png" /> <a href="https://opengameart.org/sites/default/files/goblinsword_0.png" type="image/png; length=39977" data-fid="42452" target="_blank" download="goblinsword.png">goblinsword.png</a> 40 Kb <span class="dlcount">[<span class="dlcount-number" id="dlcount-42452">10751</span> download(s)]</span></span></div><div class="field-item odd"><span class="file"><img class="file-icon" alt="goblin sheeting.psd" title="image/x-photoshop" src="/modules/file/icons/image-x-generic.png" /> <a href="https://opengameart.org/sites/default/files/goblin%20sheeting.psd" type="image/x-photoshop; length=439233" data-fid="42453" target="_blank" download="goblin sheeting.psd">goblin sheeting.psd</a> 439.2 Kb <span class="dlcount">[<span class="dlcount-number" id="dlcount-42453">8499</span> download(s)]</span></span></div></div></div><ul class="links inline"><li class="comment_forbidden first last"><span><a href="/user/login?destination=node/25466%23comment-form">Log in</a> or <a href="/user/register?destination=node/25466%23comment-form">register</a> to post comments</span></li>
+</ul>    </div>
+  
+      <div class="group-footer">
+      <div id="comments" class="comment-wrapper">
+          <h2 class="title">Comments</h2>
+      
+  <a id="comment-29648"></a>
+<div class="ds-3col-stacked-fluid comment view-mode-full group-two-sidebars group-sidebar-left group-sidebar-right clearfix">
+
+  
+  
+      <div class="group-left left-side-left">
+      <span rel="sioc:has_creator"><a href="/users/mumu" title="View user profile." class="username" xml:lang="" about="/users/mumu" typeof="sioc:UserAccount" property="foaf:name" datatype="">Mumu</a></span><div class="field field-name-date-joined field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><small><em>joined 14 years 11 months ago</em></small></div></div></div><div class="field field-name-post-date field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even">06/27/2014 - 02:59</div></div></div>    </div>
+  
+      <div class="group-middle left-side-right">
+      <div class="field field-name-art-comment-type-icon field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><img typeof="foaf:Image" src="https://opengameart.org/sites/default/files/styles/icon_64x64/public/comment_type_images/oga-icon-comment.png?itok=Yw-R2vKM" alt="" /></div></div></div><div class="field field-name-ds-user-picture field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/users/mumu"><img typeof="foaf:Image" src="https://opengameart.org/sites/default/files/styles/icon_48x48/public/pictures/picture-1085-1358087470.png?itok=UQfewWW6" alt="Mumu&#039;s picture" title="Mumu&#039;s picture" /></a></div></div></div>    </div>
+  
+      <div class="group-right right-side">
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>Instant Favorite : )</p>
+</div></div></div>    </div>
+  
+      <div class="group-footer">
+      <ul class="links inline"><li class="comment_forbidden first last"><span><a href="/user/login?destination=node/25466%23comment-form">Log in</a> or <a href="/user/register?destination=node/25466%23comment-form">register</a> to post comments</span></li>
+</ul>    </div>
+  </div>
+<a id="comment-29653"></a>
+<div class="ds-3col-stacked-fluid comment comment-by-node-author view-mode-full group-two-sidebars group-sidebar-left group-sidebar-right clearfix">
+
+  
+  
+      <div class="group-left left-side-left">
+      <span rel="sioc:has_creator"><a href="/users/williamthompsonj" title="View user profile." class="username" xml:lang="" about="/users/williamthompsonj" typeof="sioc:UserAccount" property="foaf:name" datatype="">William.Thompsonj</a></span><div class="field field-name-date-joined field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><small><em>joined 12 years 9 months ago</em></small></div></div></div><div class="field field-name-post-date field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even">06/27/2014 - 06:09</div></div></div>    </div>
+  
+      <div class="group-middle left-side-right">
+      <div class="field field-name-art-comment-type-icon field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><img typeof="foaf:Image" src="https://opengameart.org/sites/default/files/styles/icon_64x64/public/comment_type_images/oga-icon-comment.png?itok=Yw-R2vKM" alt="" /></div></div></div><div class="field field-name-ds-user-picture field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/users/williamthompsonj"><img typeof="foaf:Image" src="https://opengameart.org/sites/default/files/styles/icon_48x48/public/pictures/picture-7593-1393533360.png?itok=pxKtfHd_" alt="William.Thompsonj&#039;s picture" title="William.Thompsonj&#039;s picture" /></a></div></div></div>    </div>
+  
+      <div class="group-right right-side">
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>Thanks Mumu</p>
+</div></div></div>    </div>
+  
+      <div class="group-footer">
+      <ul class="links inline"><li class="comment_forbidden first last"><span><a href="/user/login?destination=node/25466%23comment-form">Log in</a> or <a href="/user/register?destination=node/25466%23comment-form">register</a> to post comments</span></li>
+</ul>    </div>
+  </div>
+<a id="comment-29661"></a>
+<div class="ds-3col-stacked-fluid comment view-mode-full group-two-sidebars group-sidebar-left group-sidebar-right clearfix">
+
+  
+  
+      <div class="group-left left-side-left">
+      <span rel="sioc:has_creator"><a href="/users/zerohero" title="View user profile." class="username" xml:lang="" about="/users/zerohero" typeof="sioc:UserAccount" property="foaf:name" datatype="">zerohero</a></span><div class="field field-name-date-joined field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><small><em>joined 12 years 5 months ago</em></small></div></div></div><div class="field field-name-post-date field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even">06/27/2014 - 10:29</div></div></div>    </div>
+  
+      <div class="group-middle left-side-right">
+      <div class="field field-name-art-comment-type-icon field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><img typeof="foaf:Image" src="https://opengameart.org/sites/default/files/styles/icon_64x64/public/comment_type_images/oga-icon-comment.png?itok=Yw-R2vKM" alt="" /></div></div></div><div class="field field-name-ds-user-picture field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/users/zerohero"><img typeof="foaf:Image" src="https://opengameart.org/sites/default/files/styles/icon_48x48/public/pictures/picture-9174-1379875876.gif?itok=TyB6EW7k" alt="zerohero&#039;s picture" title="zerohero&#039;s picture" /></a></div></div></div>    </div>
+  
+      <div class="group-right right-side">
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>A valuable contribtuion to the LPC!</p>
+</div></div></div>    </div>
+  
+      <div class="group-footer">
+      <ul class="links inline"><li class="comment_forbidden first last"><span><a href="/user/login?destination=node/25466%23comment-form">Log in</a> or <a href="/user/register?destination=node/25466%23comment-form">register</a> to post comments</span></li>
+</ul>    </div>
+  </div>
+<a id="comment-29662"></a>
+<div class="ds-3col-stacked-fluid comment comment-by-node-author view-mode-full group-two-sidebars group-sidebar-left group-sidebar-right clearfix">
+
+  
+  
+      <div class="group-left left-side-left">
+      <span rel="sioc:has_creator"><a href="/users/williamthompsonj" title="View user profile." class="username" xml:lang="" about="/users/williamthompsonj" typeof="sioc:UserAccount" property="foaf:name" datatype="">William.Thompsonj</a></span><div class="field field-name-date-joined field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><small><em>joined 12 years 9 months ago</em></small></div></div></div><div class="field field-name-post-date field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even">06/27/2014 - 10:39</div></div></div>    </div>
+  
+      <div class="group-middle left-side-right">
+      <div class="field field-name-art-comment-type-icon field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><img typeof="foaf:Image" src="https://opengameart.org/sites/default/files/styles/icon_64x64/public/comment_type_images/oga-icon-comment.png?itok=Yw-R2vKM" alt="" /></div></div></div><div class="field field-name-ds-user-picture field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/users/williamthompsonj"><img typeof="foaf:Image" src="https://opengameart.org/sites/default/files/styles/icon_48x48/public/pictures/picture-7593-1393533360.png?itok=pxKtfHd_" alt="William.Thompsonj&#039;s picture" title="William.Thompsonj&#039;s picture" /></a></div></div></div>    </div>
+  
+      <div class="group-right right-side">
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>Thank you zerohero. I believe in FOSS ideals, that's why I pay to have things made and give them away.</p>
+</div></div></div>    </div>
+  
+      <div class="group-footer">
+      <ul class="links inline"><li class="comment_forbidden first last"><span><a href="/user/login?destination=node/25466%23comment-form">Log in</a> or <a href="/user/register?destination=node/25466%23comment-form">register</a> to post comments</span></li>
+</ul>    </div>
+  </div>
+<a id="comment-29687"></a>
+<div class="ds-3col-stacked-fluid comment view-mode-full group-two-sidebars group-sidebar-left group-sidebar-right clearfix">
+
+  
+  
+      <div class="group-left left-side-left">
+      <span rel="sioc:has_creator"><a href="/users/zapaper" title="View user profile." class="username" xml:lang="" about="/users/zapaper" typeof="sioc:UserAccount" property="foaf:name" datatype="">ZaPaper</a></span><div class="field field-name-date-joined field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><small><em>joined 11 years 9 months ago</em></small></div></div></div><div class="field field-name-post-date field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even">06/28/2014 - 22:24</div></div></div>    </div>
+  
+      <div class="group-middle left-side-right">
+      <div class="field field-name-art-comment-type-icon field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><img typeof="foaf:Image" src="https://opengameart.org/sites/default/files/styles/icon_64x64/public/comment_type_images/oga-icon-comment.png?itok=Yw-R2vKM" alt="" /></div></div></div>    </div>
+  
+      <div class="group-right right-side">
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>Thank you very much!</p>
+</div></div></div>    </div>
+  
+      <div class="group-footer">
+      <ul class="links inline"><li class="comment_forbidden first last"><span><a href="/user/login?destination=node/25466%23comment-form">Log in</a> or <a href="/user/register?destination=node/25466%23comment-form">register</a> to post comments</span></li>
+</ul>    </div>
+  </div>
+<a id="comment-34472"></a>
+<div class="ds-3col-stacked-fluid comment comment-by-node-author view-mode-full group-two-sidebars group-sidebar-left group-sidebar-right clearfix">
+
+  
+  
+      <div class="group-left left-side-left">
+      <span rel="sioc:has_creator"><a href="/users/williamthompsonj" title="View user profile." class="username" xml:lang="" about="/users/williamthompsonj" typeof="sioc:UserAccount" property="foaf:name" datatype="">William.Thompsonj</a></span><div class="field field-name-date-joined field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><small><em>joined 12 years 9 months ago</em></small></div></div></div><div class="field field-name-post-date field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even">01/26/2015 - 16:56</div></div></div>    </div>
+  
+      <div class="group-middle left-side-right">
+      <div class="field field-name-art-comment-type-icon field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><img typeof="foaf:Image" src="https://opengameart.org/sites/default/files/styles/icon_64x64/public/comment_type_images/oga-icon-comment.png?itok=Yw-R2vKM" alt="" /></div></div></div><div class="field field-name-ds-user-picture field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/users/williamthompsonj"><img typeof="foaf:Image" src="https://opengameart.org/sites/default/files/styles/icon_48x48/public/pictures/picture-7593-1393533360.png?itok=pxKtfHd_" alt="William.Thompsonj&#039;s picture" title="William.Thompsonj&#039;s picture" /></a></div></div></div>    </div>
+  
+      <div class="group-right right-side">
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>New goblin parts coming soon. Redshrike has been hard at work creating an amazing set of new accessories! Stay tuned for an update soon.</p>
+</div></div></div>    </div>
+  
+      <div class="group-footer">
+      <ul class="links inline"><li class="comment_forbidden first last"><span><a href="/user/login?destination=node/25466%23comment-form">Log in</a> or <a href="/user/register?destination=node/25466%23comment-form">register</a> to post comments</span></li>
+</ul>    </div>
+  </div>
+<a id="comment-38216"></a>
+<div class="ds-3col-stacked-fluid comment view-mode-full group-two-sidebars group-sidebar-left group-sidebar-right clearfix">
+
+  
+  
+      <div class="group-left left-side-left">
+      <span rel="sioc:has_creator"><a href="/users/hawthorn" title="View user profile." class="username" xml:lang="" about="/users/hawthorn" typeof="sioc:UserAccount" property="foaf:name" datatype="">Hawthorn</a></span><div class="field field-name-date-joined field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><small><em>joined 10 years 9 months ago</em></small></div></div></div><div class="field field-name-post-date field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even">06/10/2015 - 10:50</div></div></div>    </div>
+  
+      <div class="group-middle left-side-right">
+      <div class="field field-name-art-comment-type-icon field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><img typeof="foaf:Image" src="https://opengameart.org/sites/default/files/styles/icon_64x64/public/comment_type_images/oga-icon-comment.png?itok=Yw-R2vKM" alt="" /></div></div></div>    </div>
+  
+      <div class="group-right right-side">
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>I think there is something wrong with the placement of the images on the sheet. (or I am doing something wrong). When I bring this into Unity and Split the sprites into a 64x64 grid, the goblins are offset in unpredictable ways.</p>
+<p>Try it. Split into 64x64. Then flip through the sprites, you see the golblin 'slides' to the right. If I compensate for the slide on the first few images, the others are offset in different directions.</p>
+<p>Ideas?</p>
+</div></div></div>    </div>
+  
+      <div class="group-footer">
+      <ul class="links inline"><li class="comment_forbidden first last"><span><a href="/user/login?destination=node/25466%23comment-form">Log in</a> or <a href="/user/register?destination=node/25466%23comment-form">register</a> to post comments</span></li>
+</ul>    </div>
+  </div>
+<a id="comment-38901"></a>
+<div class="ds-3col-stacked-fluid comment view-mode-full group-two-sidebars group-sidebar-left group-sidebar-right clearfix">
+
+  
+  
+      <div class="group-left left-side-left">
+      <span rel="sioc:has_creator"><a href="/users/evert" title="View user profile." class="username" xml:lang="" about="/users/evert" typeof="sioc:UserAccount" property="foaf:name" datatype="">Evert</a></span><div class="field field-name-date-joined field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><small><em>joined 11 years 1 month ago</em></small></div></div></div><div class="field field-name-post-date field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even">06/24/2015 - 11:06</div></div></div>    </div>
+  
+      <div class="group-middle left-side-right">
+      <div class="field field-name-art-comment-type-icon field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><img typeof="foaf:Image" src="https://opengameart.org/sites/default/files/styles/icon_64x64/public/comment_type_images/oga-icon-comment.png?itok=Yw-R2vKM" alt="" /></div></div></div><div class="field field-name-ds-user-picture field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/users/evert"><img typeof="foaf:Image" src="https://opengameart.org/sites/default/files/styles/icon_48x48/public/pictures/picture-19841-1696694465.png?itok=u_dVEMt8" alt="Evert&#039;s picture" title="Evert&#039;s picture" /></a></div></div></div>    </div>
+  
+      <div class="group-right right-side">
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>I have re-aligned the images in the goblin-with-sword sheet above (attached). This fixes a problem with the goblin "drifting" mentioned above. I've also flipped the order to rear-left-front-right to match the other LPC assets and moved the attack animation to its own rank (so each row only contains frames for one animation).</p>
+<p> </p>
+<p>For anyone who wants to do something similar, here's what I did (after splitting to one animation per rank):</p>
+<p>1. Cut the image up in vertical strip, one frame for each animation in each.</p>
+<p>2. Place each strip in a new layer.</p>
+<p>3. Pick an anchor point. I picked the base of the head for the rear-facing one (with one exception, as mentioned below), the belt-buckle for the front-facing and side-view, and the support foot for the stabbing animation.</p>
+<p>4. For each frame, align the anchor point across different layers. For the rear-facing one, I used the base of the feet instead of the head for a few frames, to preserve the bob of the head.</p>
+<p>5. Convert the different layers to a sprite sheet (there's a GIMP plugin for that).</p>
+<p> </p>
+<p>EDIT: I just realised that this guy actually appears taller than the LPC base sprites, which looks a bit off...</p>
+</div></div></div><div class="field field-name-field-forum-attachments field-type-image field-label-above"><div class="field-label">Attachments:&nbsp;</div><div class="field-items"><div class="field-item even"><img typeof="foaf:Image" src="https://opengameart.org/sites/default/files/aligned_goblin.png" width="448" height="576" alt="" /></div></div></div>    </div>
+  
+      <div class="group-footer">
+      <ul class="links inline"><li class="comment_forbidden first last"><span><a href="/user/login?destination=node/25466%23comment-form">Log in</a> or <a href="/user/register?destination=node/25466%23comment-form">register</a> to post comments</span></li>
+</ul>    </div>
+  </div>
+<a id="comment-39896"></a>
+<div class="ds-3col-stacked-fluid comment view-mode-full group-two-sidebars group-sidebar-left group-sidebar-right clearfix">
+
+  
+  
+      <div class="group-left left-side-left">
+      <span rel="sioc:has_creator"><a href="/users/tvcruelty" title="View user profile." class="username" xml:lang="" about="/users/tvcruelty" typeof="sioc:UserAccount" property="foaf:name" datatype="">TVCruelty</a></span><div class="field field-name-date-joined field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><small><em>joined 10 years 7 months ago</em></small></div></div></div><div class="field field-name-post-date field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even">08/01/2015 - 03:57</div></div></div>    </div>
+  
+      <div class="group-middle left-side-right">
+      <div class="field field-name-art-comment-type-icon field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><img typeof="foaf:Image" src="https://opengameart.org/sites/default/files/styles/icon_64x64/public/comment_type_images/oga-icon-comment.png?itok=Yw-R2vKM" alt="" /></div></div></div><div class="field field-name-ds-user-picture field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/users/tvcruelty"><img typeof="foaf:Image" src="https://opengameart.org/sites/default/files/styles/icon_48x48/public/pictures/picture-26604-1438424437.jpg?itok=ukGhyJgX" alt="TVCruelty&#039;s picture" title="TVCruelty&#039;s picture" /></a></div></div></div>    </div>
+  
+      <div class="group-right right-side">
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>Hi,</p>
+<p>Just wanted to say thank you for these brilliant images. I'm using them in my new game, "Goblin Harvest - The Mighty Quest". The game's (nearly) in Early Access / beta and can be played at <a href="http://www.goblinharvest.com" target="_new">goblinharvest.com</a> (browser-based HTML5 version - needs a reasonable internet connection and doesn't work at all on iPhone or iPad).</p>
+<p>I plan to realease the game for iPad (proper iOS version) and Windows. More info at the <a href="http://www.goblinharvest.uk" target="_new">Offical Web Site</a> and <a href="http://www.elvipedia.org" target="_new">Game Wiki</a>.</p>
+<p>I think you'll agree that your Goblins look brilliant as they march down the map!</p>
+<p>Thanks again,</p>
+<p>Ian</p>
+</div></div></div><div class="field field-name-field-forum-attachments field-type-image field-label-above"><div class="field-label">Attachments:&nbsp;</div><div class="field-items"><div class="field-item even"><img typeof="foaf:Image" src="https://opengameart.org/sites/default/files/Goblin%20Harvest%20sc2_1.png" width="640" height="480" alt="" /></div></div></div>    </div>
+  
+      <div class="group-footer">
+      <ul class="links inline"><li class="comment_forbidden first last"><span><a href="/user/login?destination=node/25466%23comment-form">Log in</a> or <a href="/user/register?destination=node/25466%23comment-form">register</a> to post comments</span></li>
+</ul>    </div>
+  </div>
+<a id="comment-57552"></a>
+<div class="ds-3col-stacked-fluid comment comment-by-node-author view-mode-full group-two-sidebars group-sidebar-left group-sidebar-right clearfix">
+
+  
+  
+      <div class="group-left left-side-left">
+      <span rel="sioc:has_creator"><a href="/users/williamthompsonj" title="View user profile." class="username" xml:lang="" about="/users/williamthompsonj" typeof="sioc:UserAccount" property="foaf:name" datatype="">William.Thompsonj</a></span><div class="field field-name-date-joined field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><small><em>joined 12 years 9 months ago</em></small></div></div></div><div class="field field-name-post-date field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even">02/24/2017 - 05:29</div></div></div>    </div>
+  
+      <div class="group-middle left-side-right">
+      <div class="field field-name-art-comment-type-icon field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><img typeof="foaf:Image" src="https://opengameart.org/sites/default/files/styles/icon_64x64/public/comment_type_images/oga-icon-comment.png?itok=Yw-R2vKM" alt="" /></div></div></div><div class="field field-name-ds-user-picture field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/users/williamthompsonj"><img typeof="foaf:Image" src="https://opengameart.org/sites/default/files/styles/icon_48x48/public/pictures/picture-7593-1393533360.png?itok=pxKtfHd_" alt="William.Thompsonj&#039;s picture" title="William.Thompsonj&#039;s picture" /></a></div></div></div>    </div>
+  
+      <div class="group-right right-side">
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>Sweet, happy to see this goblin sprite getting used.</p>
+</div></div></div>    </div>
+  
+      <div class="group-footer">
+      <ul class="links inline"><li class="comment_forbidden first last"><span><a href="/user/login?destination=node/25466%23comment-form">Log in</a> or <a href="/user/register?destination=node/25466%23comment-form">register</a> to post comments</span></li>
+</ul>    </div>
+  </div>
+<a id="comment-57571"></a>
+<div class="ds-3col-stacked-fluid comment view-mode-full group-two-sidebars group-sidebar-left group-sidebar-right clearfix">
+
+  
+  
+      <div class="group-left left-side-left">
+      <span rel="sioc:has_creator"><a href="/users/tvcruelty" title="View user profile." class="username" xml:lang="" about="/users/tvcruelty" typeof="sioc:UserAccount" property="foaf:name" datatype="">TVCruelty</a></span><div class="field field-name-date-joined field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><small><em>joined 10 years 7 months ago</em></small></div></div></div><div class="field field-name-post-date field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even">02/25/2017 - 04:38</div></div></div>    </div>
+  
+      <div class="group-middle left-side-right">
+      <div class="field field-name-art-comment-type-icon field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><img typeof="foaf:Image" src="https://opengameart.org/sites/default/files/styles/icon_64x64/public/comment_type_images/oga-icon-comment.png?itok=Yw-R2vKM" alt="" /></div></div></div><div class="field field-name-ds-user-picture field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/users/tvcruelty"><img typeof="foaf:Image" src="https://opengameart.org/sites/default/files/styles/icon_48x48/public/pictures/picture-26604-1438424437.jpg?itok=ukGhyJgX" alt="TVCruelty&#039;s picture" title="TVCruelty&#039;s picture" /></a></div></div></div>    </div>
+  
+      <div class="group-right right-side">
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>Things have moved on a bit since I posted. I've had all of the graphics overhauled by an artist, so the game is now much less "8-bit". I still really liked the goblins, though, so I asked the artist to make higher-res versions. I think you'll like how they turned out.</p>
+<p>You get a mention, of course, on the "About" screen of the game.</p>
+</div></div></div><div class="field field-name-field-forum-attachments field-type-image field-label-above"><div class="field-label">Attachments:&nbsp;</div><div class="field-items"><div class="field-item even"><img typeof="foaf:Image" src="https://opengameart.org/sites/default/files/GH-snow-screenshot.png" width="480" height="270" alt="" /></div></div></div>    </div>
+  
+      <div class="group-footer">
+      <ul class="links inline"><li class="comment_forbidden first last"><span><a href="/user/login?destination=node/25466%23comment-form">Log in</a> or <a href="/user/register?destination=node/25466%23comment-form">register</a> to post comments</span></li>
+</ul>    </div>
+  </div>
+<a id="comment-108611"></a>
+<div class="ds-3col-stacked-fluid comment view-mode-full group-two-sidebars group-sidebar-left group-sidebar-right clearfix">
+
+  
+  
+      <div class="group-left left-side-left">
+      <span rel="sioc:has_creator"><a href="/users/dansena" title="View user profile." class="username" xml:lang="" about="/users/dansena" typeof="sioc:UserAccount" property="foaf:name" datatype="">Dansena</a></span><div class="field field-name-date-joined field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><small><em>joined 11 months 4 weeks ago</em></small></div></div></div><div class="field field-name-post-date field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even">03/18/2025 - 12:59</div></div></div>    </div>
+  
+      <div class="group-middle left-side-right">
+      <div class="field field-name-art-comment-type-icon field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><img typeof="foaf:Image" src="https://opengameart.org/sites/default/files/styles/icon_64x64/public/comment_type_images/oga-icon-comment.png?itok=Yw-R2vKM" alt="" /></div></div></div>    </div>
+  
+      <div class="group-right right-side">
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>I used your goblin in a top-down Link to the Past type game. I just uploaded an update to itch.io. If you would like to check it out here is the link: <a href="https://dansena.itch.io/cronicles-of-liberia-the-legend-of-sara">https://dansena.itch.io/cronicles-of-liberia-the-legend-of-sara</a></p>
+</div></div></div>    </div>
+  
+      <div class="group-footer">
+      <ul class="links inline"><li class="comment_forbidden first last"><span><a href="/user/login?destination=node/25466%23comment-form">Log in</a> or <a href="/user/register?destination=node/25466%23comment-form">register</a> to post comments</span></li>
+</ul>    </div>
+  </div>
+
+  </div>
+    </div>
+  </div>
+  </div>
+</div>
+  </div>
+    </div>
+  </div>
+</div>
+  </body>
+</html>
