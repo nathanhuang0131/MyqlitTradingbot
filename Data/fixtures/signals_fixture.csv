@@ -1,0 +1,4 @@
+symbol,timestamp,alpha,direction,confidence,horizon,model_id
+AAPL,2026-03-05T00:00:00Z,0.21,BUY,0.21,1D,fixture_model
+MSFT,2026-03-05T00:00:00Z,0.17,BUY,0.17,1D,fixture_model
+TSLA,2026-03-05T00:00:00Z,-0.11,SELL,0.11,1D,fixture_model
