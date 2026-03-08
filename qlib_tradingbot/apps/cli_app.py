@@ -25,8 +25,19 @@ def _build_clients(paper: bool, dry_run: bool):
         from qlib_tradingbot.Brokers.alpaca_clients import build_clients
 
         return build_clients(paper=paper)
-    except Exception:
-        return None, None
+    except Exception as exc:
+        from qlib_tradingbot.Brokers.alpaca_clients import diagnose_broker_setup
+
+        diag = diagnose_broker_setup(paper=paper, try_build=False)
+        msg = (
+            f"Broker client initialization failed: {exc}\n"
+            f"env_file={diag.get('env_file')}\n"
+            f"broker_configured={diag.get('broker_configured')} "
+            f"alpaca_available={diag.get('alpaca_available')} "
+            f"mode={diag.get('mode')}\n"
+            "Fix credentials (.env or env vars) and ensure alpaca-py is installed."
+        )
+        raise SystemExit(msg) from exc
 
 
 def _append_csv(path: Path, rows: list[dict]) -> None:

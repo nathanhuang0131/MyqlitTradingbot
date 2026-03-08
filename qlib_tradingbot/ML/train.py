@@ -5,7 +5,7 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 
-from qlib_tradingbot.Core.features_intraday import FEATURE_COLUMNS
+from qlib_tradingbot.core.features_intraday import FEATURE_COLUMNS
 
 
 def train_intraday_stub(data_dir: Path) -> Path:

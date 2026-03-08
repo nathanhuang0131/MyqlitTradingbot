@@ -1,7 +1,12 @@
 from __future__ import annotations
 
 from importlib import import_module
+import sys
+from pathlib import Path
 
+ROOT = Path(__file__).resolve().parents[2]  # project root
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
 def _st():
     try:
@@ -17,13 +22,13 @@ def _st():
 
 def main() -> None:
     st = _st()
-    st.set_page_config(page_title="Qlib Trading Dashboard", layout="wide")
-    st.title("Qlib Trading Dashboard")
-    st.caption("Cached-data-first dashboard. Use streamlit run qlib_tradingbot/apps/dashboard_app.py")
+    st.set_page_config(page_title="Qlib Operations Dashboard", layout="wide")
+    st.title("Qlib Operations Dashboard")
+    st.caption("Cached-data-first control center. Use streamlit run qlib_tradingbot/apps/dashboard_app.py")
 
     st.markdown("### Pages")
-    st.write("1. Account & PnL")
-    st.write("2. Market & Macro")
+    st.write("1. Account Operations")
+    st.write("2. Market Operations")
     st.write("3. Fund Flows")
 
 

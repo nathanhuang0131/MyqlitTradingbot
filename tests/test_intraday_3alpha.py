@@ -7,7 +7,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from qlib_tradingbot.Core.features_intraday import FEATURE_COLUMNS, build_intraday_features
+from qlib_tradingbot.core.features_intraday import FEATURE_COLUMNS, build_intraday_features
 from qlib_tradingbot.Strategies.base import StrategyContext
 from qlib_tradingbot.Strategies.intraday_3alpha import Intraday3AlphaStrategy
 

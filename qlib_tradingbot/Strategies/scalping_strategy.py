@@ -6,7 +6,7 @@ from typing import Any
 
 import pandas as pd
 
-from qlib_tradingbot.Core.models import Signal
+from qlib_tradingbot.core.models import Signal
 from qlib_tradingbot.core.qlib_signal_engine import QlibSignalEngine, SignalEngineConfig
 from qlib_tradingbot.Data.batch_bars import BatchFetchConfig, fetch_1m_bars_batch
 from qlib_tradingbot.Execution.engine import execute_signals
@@ -219,13 +219,14 @@ class ScalpingStrategy(StrategyBase):
         return gated
 
     def execute(self, signals):
+        effective_dry_run = bool((self.ctx.config or {}).get("dry_run", DRY_RUN))
         if not signals:
             self._monitor_log(
                 stage="stage3_execution",
                 status="ok",
                 message="no signals to execute",
                 metrics={
-                    "dry_run": bool(DRY_RUN),
+                    "dry_run": bool(effective_dry_run),
                     "orders_attempted": 0,
                     "orders_submitted": 0,
                     "orders_failed": 0,
@@ -243,7 +244,7 @@ class ScalpingStrategy(StrategyBase):
                 status="fail",
                 message="missing trade client",
                 metrics={
-                    "dry_run": bool(DRY_RUN),
+                    "dry_run": bool(effective_dry_run),
                     "orders_attempted": int(len(signals)),
                     "orders_submitted": 0,
                     "orders_failed": int(len(signals)),
@@ -260,7 +261,12 @@ class ScalpingStrategy(StrategyBase):
             bool(self.ctx.config.get("allow_shorts", False)),
         )
         if isinstance(signals[0], Signal):
-            results = execute_signals(self.ctx.trade_client, signals, allow_shorts=allow_shorts)
+            results = execute_signals(
+                self.ctx.trade_client,
+                signals,
+                dry_run=effective_dry_run,
+                allow_shorts=allow_shorts,
+            )
         else:
             results = signals
 
@@ -298,7 +304,7 @@ class ScalpingStrategy(StrategyBase):
             status="ok",
             message="execution completed",
             metrics={
-                "dry_run": bool(DRY_RUN),
+                "dry_run": bool(effective_dry_run),
                 "orders_attempted": int(orders_attempted),
                 "orders_submitted": int(orders_submitted),
                 "orders_failed": int(orders_failed),

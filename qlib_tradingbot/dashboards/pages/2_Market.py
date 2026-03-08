@@ -2,62 +2,70 @@ from __future__ import annotations
 
 from pathlib import Path
 
-import pandas as pd
-
-from qlib_tradingbot.core.data_provider import DataProvider
-
-
-MACRO_SYMBOLS = ["US10Y", "DXY", "GOLD", "SILVER", "BTC", "SPY", "QQQ", "OEF"]
+from qlib_tradingbot.dashboards.data_views import MACRO_SYMBOLS, load_market_view
 
 
 def _st():
     try:
         import streamlit as st
+
         return st
     except Exception:
         class _Dummy:
             def __getattr__(self, _name):
                 def _noop(*_args, **_kwargs):
                     return None
+
                 return _noop
+
         return _Dummy()
+
+
+def _fmt(value, *, pct: bool = False) -> str:
+    if value is None:
+        return "n/a"
+    if pct:
+        return f"{float(value):.2f}%"
+    return f"{float(value):,.2f}"
 
 
 def render(data_root: Path | str = "Data") -> None:
     st = _st()
-    root = Path(data_root)
-    provider = DataProvider(data_root=root)
+    view = load_market_view(Path(data_root))
 
-    st.header("Market & Macro")
-    if st.button("Refresh"):
-        provider.refresh_market_cache(MACRO_SYMBOLS)
+    st.header("Market Operations")
+    macro = view["macro"]
+    if macro.empty:
+        st.info("No macro cache found under Data/market.")
+    else:
+        cols = st.columns(len(MACRO_SYMBOLS))
+        for i, sym in enumerate(MACRO_SYMBOLS):
+            row = macro[macro["symbol"] == sym]
+            close = row["close"].iloc[0] if not row.empty else None
+            move = row["move_pct"].iloc[0] if not row.empty else None
+            cols[i].metric(sym, _fmt(close), delta=_fmt(move, pct=True) if move is not None else None)
 
-    for sym in MACRO_SYMBOLS:
-        df = provider.read_market_series(sym)
-        st.subheader(sym)
-        if df.empty:
-            st.caption(f"Missing cached series for {sym} at Data/market/{sym}.csv")
-        else:
-            st.dataframe(df.tail(30))
+    st.subheader("Top Movers / Watchlist")
+    movers = view["top_movers"]
+    if movers.empty:
+        st.info("No cached watchlist mover data available.")
+    else:
+        st.dataframe(movers, use_container_width=True)
 
-    sig_path = root / "signals" / "intraday_3alpha_signals.csv"
-    if sig_path.exists():
-        sig = pd.read_csv(sig_path)
-        st.subheader("Intraday Alphas")
-        cols = [c for c in ["symbol", "alpha_ml", "alpha_mr", "alpha_mom", "alpha_total", "close_last", "dollar_vol"] if c in sig.columns]
-        if cols:
-            st.dataframe(sig[cols].head(50))
-        else:
-            st.dataframe(sig.head(50))
-            st.caption("Missing expected alpha columns in cached signals file.")
+    st.subheader("Alpha Decomposition")
+    alpha = view["alpha"]
+    if alpha.empty:
+        st.info("No cached alpha decomposition found (expected alpha_ml/alpha_mr/alpha_mom/alpha_total).")
+    else:
+        st.dataframe(alpha.head(100), use_container_width=True)
 
-        if {"symbol", "close_last"}.issubset(sig.columns):
-            watch = sig.copy()
-            watch["move_pct"] = pd.to_numeric(watch.get("intraday_return", 0.0), errors="coerce").fillna(0.0) * 100.0
-            wcols = [c for c in ["symbol", "close_last", "dollar_vol", "vol_ratio_1", "move_pct"] if c in watch.columns]
-            if wcols:
-                st.subheader("Watchlist Price/Volume/Move")
-                st.dataframe(watch[wcols].head(50))
+    st.subheader("Stage Funnel")
+    funnel = view["stage_funnel"]
+    if funnel.empty:
+        st.info("No stage trace funnel available. Expected Data/stage_trace.csv.")
+    else:
+        st.dataframe(funnel, use_container_width=True)
 
 
 render()
+
