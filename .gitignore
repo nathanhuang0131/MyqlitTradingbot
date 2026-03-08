@@ -1,0 +1,33 @@
+# --- Generated data / caches ---
+Data/
+data/
+**/cache/
+**/downloads/
+**/caches/
+**/daily/
+**/*.csv
+!tests/fixtures/**/*.csv
+
+# Keep sample CSVs only if you intentionally want them:
+# !Data/samples/**/*.csv
+
+# --- Logs / outputs ---
+logs/
+**/*.log
+
+# --- Python ---
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+.env
+
+# --- Models / artifacts (often generated) ---
+Artifacts/
+artifacts/
+**/*.pkl
+**/*.joblib
+
+# --- OS ---
+Thumbs.db
+.DS_Store
